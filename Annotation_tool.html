@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Annotation</title>
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.8;
+    margin: 0;
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #0056b3;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 24px;
+    color: #0056b3;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 10px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0056b3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover,
+button:focus {
+    background-color: #003d82;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"],
+input[type="file"] {
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    background: #fff;
+    color: #333;
+}
+
+#labels-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.label-btn {
+    background-color: #e7e7e7;
+    color: #333;
+    margin-right: 10px;
+}
+
+.delete-label-btn {
+    padding: 5px 8px;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.label-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    table-layout: auto;
+}
+
+th:first-child, td:first-child,
+th:nth-child(1), td:nth-child(1) {
+    width: 5%;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+@media screen and (max-width: 768px) {
+    .table, th, td {
+        width: auto;
+        padding: 10px;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+}
+
+th {
+    background-color: #0056b3;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+#confirm-button, #download-button {
+    display: block;
+    margin: 20px 0;
+}
+
+
+#download-button {
+    display: block;
+    margin: 30px auto;
+    background-color: #ff4500;
+    color: white;
+    font-size: 24px;
+    border: 3px solid #ffa500;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+#download-button:hover {
+    background-color: #ffa500;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+</style>
+</head>
+<body>
+    <h1>ESL Label Annotation Tool</h1>
+    <p>Please refer to the annotation labels in the annotator manual, and check the example when you feel unsure about it. <br>
+    You can always reannotate if you made a mistake. Put all the labels as you look through the dialogue data. 
+    </p>
+    <input type="file" id="file-input" accept=".xlsx, .xls" />
+    <button id="confirm-button">Show content</button>
+
+    <input type="text" id="custom-label-name" placeholder="Enter custom label name" />
+
+    <div id="labels-container"></div>
+
+    <div id="label-buttons">
+        <button id="add-custom-label">Add Label</button>
+        <button id="toggle-labels-btn">Show Labels</button>
+        <button id="clear-highlights" style="background-color:#0056b3;">Clear all annotation</button>
+        <button id="delete-highlight" style="background-color:#0056b3;">Cancel annotation</button>
+    </div>
+
+    <div id="dialogue-content">
+        <!-- Dialogue content will be displayed here -->
+    </div>
+    <button id="download-button" style="display:none;">Download</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
