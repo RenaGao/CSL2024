@@ -1,6 +1,6 @@
 # CSL2024
 
-CNIMA  (\textbf{C}hinease \textbf{N}on-Native\textbf{I}nteractivity \textbf{M}easurement and \textbf{A}utomation) is a fully annotated spoken dialogue dataset for automated evaluating dialogue quality and dialogue annotations for Chinese Second Language (CSL)conversation dialogue.
+CNIMA  (Chinease Non-Native Interactivity Measurement and Automation) is a fully annotated spoken dialogue dataset for automated evaluating dialogue quality and dialogue annotations for Chinese Second Language (CSL)conversation dialogue.
 
 It was created for the CNIMA project:
 
