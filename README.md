@@ -26,9 +26,11 @@ Python script data/explore_data.py provides an example of interfacing with the d
 ### Notebooks
 
 - `notebooks/a.ipynb` - Notebook for preprocessing
-- `notebooks/b.ipynb` - Notebook for main experiments
-- `notebooks/c.ipync` - Notebook for added experiments
-- `notebooks/d.ipynd` - Notebook for prompt LLM
+- `notebooks/b.ipynb` - Notebook for main experiments in micro-level prediction
+- `notebooks/c.ipync` - Notebook for added experiments in score prediction 
+- `notebooks/d.ipynd` - Notebook for prompt LLM in annotation and score prediction
+- `notebooks/e.ipyne` - Notebook for data annotation website and platform 
+
 
 ### Figures
 
