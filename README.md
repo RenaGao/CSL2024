@@ -19,9 +19,9 @@ Python script data/explore_data.py provides an example of interfacing with the d
 - Dataset Viewing
 - To run the notebooks for examining the datasets, please follow the procedures listed below:
 
-- Download the dataset from the folder.
+- Download the dataset from the Shared folder link.
 - Put the data into dataset/CNIMA and extract sample.zip.
-- To view the data, one may use preprocessing.ipynb for viewing the examples.
+- To view the data, one may use preprocessing.ipynb for viewing the examples in the example folder.
 
 ### Notebooks
 
